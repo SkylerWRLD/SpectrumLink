@@ -1,4 +1,4 @@
-local Library = {}
+--local Library = {}
 
 --// Services \\--
 
@@ -31,7 +31,7 @@ end
 
 --// Main \\--
 
-function Library:CreateHub()
+function CreateHub()
 	local Tab = {}
 	
 	local SpectrumUI = Instance.new("ScreenGui")
@@ -532,4 +532,4 @@ function Library:CreateHub()
 	return Tab
 end
 
-return Library
+--return Library
