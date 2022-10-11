@@ -413,7 +413,7 @@ function Library:CreateHub()
 			DetailsTitleLabel.Font = Enum.Font.GothamBold
 			DetailsTitleLabel.Text = "- Premium Benefits -"
 			DetailsTitleLabel.TextSize = 18
-			DetailsTitleLabel.ZIndex = 3
+			DetailsTitleLabel.ZIndex = 4
 			DetailsTitleLabel.LayoutOrder = 1
 			DetailsTitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 			DetailsTitleLabel.Name = "Title"
@@ -425,7 +425,7 @@ function Library:CreateHub()
 			DetailsLabelOne.Font = Enum.Font.GothamBold
 			DetailsLabelOne.Text = "• Access To All Paid Script Features"
 			DetailsLabelOne.TextSize = 18
-			DetailsLabelOne.ZIndex = 3
+			DetailsLabelOne.ZIndex = 4
 			DetailsLabelOne.LayoutOrder = 2
 			DetailsLabelOne.TextColor3 = Color3.fromRGB(255, 255, 255)
 			DetailsLabelOne.Name = "LabelOne"
@@ -437,7 +437,7 @@ function Library:CreateHub()
 			DetailsLabelTwo.Font = Enum.Font.GothamBold
 			DetailsLabelTwo.Text = "• Early Access To New Scripts/Features"
 			DetailsLabelTwo.TextSize = 18
-			DetailsLabelTwo.ZIndex = 3
+			DetailsLabelTwo.ZIndex = 4
 			DetailsLabelTwo.LayoutOrder = 3
 			DetailsLabelTwo.TextColor3 = Color3.fromRGB(255, 255, 255)
 			DetailsLabelTwo.Name = "LabelTwo"
@@ -449,7 +449,7 @@ function Library:CreateHub()
 			DetailsLabelThree.Font = Enum.Font.GothamBold
 			DetailsLabelThree.Text = "• Access To All Scripts"
 			DetailsLabelThree.TextSize = 18
-			DetailsLabelThree.ZIndex = 3
+			DetailsLabelThree.ZIndex = 4
 			DetailsLabelThree.LayoutOrder = 4
 			DetailsLabelThree.TextColor3 = Color3.fromRGB(255, 255, 255)
 			DetailsLabelThree.Name = "LabelThree"
@@ -461,7 +461,7 @@ function Library:CreateHub()
 			DetailsLabelFour.Font = Enum.Font.GothamBold
 			DetailsLabelFour.Text = "• Special Discord Role"
 			DetailsLabelFour.TextSize = 18
-			DetailsLabelFour.ZIndex = 3
+			DetailsLabelFour.ZIndex = 4
 			DetailsLabelFour.LayoutOrder = 5
 			DetailsLabelFour.TextColor3 = Color3.fromRGB(255, 255, 255)
 			DetailsLabelFour.Name = "LabelFour"
