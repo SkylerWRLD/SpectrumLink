@@ -468,7 +468,7 @@ function Library:CreateHub()
 			DetailsLabelFour.Name = "LabelFour"
 			
 			StatusDetailsLabel.Size = UDim2.new(1, 0, 0.5, 0)
-			StatusDetailsLabel.Position = UDim2.new(1, 0, 0.5, 0)
+			StatusDetailsLabel.Position = UDim2.new(0.5, 0, 0.65, 0)
 			StatusDetailsLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 			StatusDetailsLabel.BackgroundTransparency = 1
 			StatusDetailsLabel.Font = Enum.Font.GothamBold
@@ -480,7 +480,7 @@ function Library:CreateHub()
 			
 			PremiumStatusLabel.Size = UDim2.new(1, 0, 0.25, 0)
 			PremiumStatusLabel.Position = UDim2.new(1, 0, 0.08, 0)
-			PremiumStatusLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+			PremiumStatusLabel.AnchorPoint = Vector2.new(0.5, 0)
 			PremiumStatusLabel.BackgroundTransparency = 1
 			PremiumStatusLabel.Font = Enum.Font.GothamBold
 			PremiumStatusLabel.Text = "You Don't Own Premium"
