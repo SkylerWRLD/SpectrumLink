@@ -13,22 +13,6 @@ local DragStart = nil
 local StartPosition = nil
 local PlayerMouse = game.Players.LocalPlayer:GetMouse()
 
---// Functions \\--
-
-function RenameUIObjects(UI)
-	for i, v in pairs(UI:GetDescendants()) do
-		if v:IsA("UICorner") then
-			v.Name = "Corner"
-		elseif v:IsA("UIStroke") then
-			v.Name = "Stroke"
-		elseif v:IsA("UIListLayout") then
-			v.Name = "List"
-		elseif v:IsA("UIPadding") then
-			v.Name = "Padding"
-		end
-	end
-end
-
 --// Main \\--
 
 function Library:CreateHub()
@@ -531,7 +515,5 @@ function Library:CreateHub()
 	
 	return Tab
 end
-
-RenameUIObjects(game.Players.LocalPlayer.PlayerGui:WaitForChild("Spectrum"))
 
 return Library
