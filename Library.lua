@@ -291,8 +291,9 @@ function Library:CreateHub()
 			local DetailsLabelTwo = Instance.new("TextLabel", DetailsContainerFrame)
 			local DetailsLabelThree = Instance.new("TextLabel", DetailsContainerFrame)
 			local DetailsLabelFour = Instance.new("TextLabel", DetailsContainerFrame)
+			local StatusDetailsLabel = Instance.new("TextLabel", StatusFrame)
+			local PremiumStatusLabel = Instance.new("TextLabel", StatusFrame)
 
-			
 			PremiumFrame.Size = UDim2.new(1, 0, 1, 0)
 			PremiumFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 			PremiumFrame.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -465,6 +466,28 @@ function Library:CreateHub()
 			DetailsLabelFour.LayoutOrder = 5
 			DetailsLabelFour.TextColor3 = Color3.fromRGB(255, 255, 255)
 			DetailsLabelFour.Name = "LabelFour"
+			
+			StatusDetailsLabel.Size = UDim2.new(1, 0, 0.5, 0)
+			StatusDetailsLabel.Position = UDim2.new(1, 0, 0.5, 0)
+			StatusDetailsLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+			StatusDetailsLabel.BackgroundTransparency = 1
+			StatusDetailsLabel.Font = Enum.Font.GothamBold
+			StatusDetailsLabel.Text = "Upgrade From Guest To Premium To Unlock The Premium Benefits!"
+			StatusDetailsLabel.TextScaled = true
+			StatusDetailsLabel.ZIndex = 4
+			StatusDetailsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			StatusDetailsLabel.Name = "Details"
+			
+			PremiumStatusLabel.Size = UDim2.new(1, 0, 0.25, 0)
+			PremiumStatusLabel.Position = UDim2.new(1, 0, 0.08, 0)
+			PremiumStatusLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+			PremiumStatusLabel.BackgroundTransparency = 1
+			PremiumStatusLabel.Font = Enum.Font.GothamBold
+			PremiumStatusLabel.Text = "You Don't Own Premium"
+			PremiumStatusLabel.TextSize = 20
+			PremiumStatusLabel.ZIndex = 4
+			PremiumStatusLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+			PremiumStatusLabel.Name = "PremiumStatus"
 			
 			BottomFrameList.Padding = UDim.new(0.015, 0)
 			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
