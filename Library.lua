@@ -269,6 +269,7 @@ function Library:CreateHub()
 			local TitlePatternCorner = Instance.new("UICorner", TitlePattern)
 			local DetailsPatternCorner = Instance.new("UICorner", DetailsPattern)
 			local StatusPatternCorner = Instance.new("UICorner", StatusPattern)
+			local LinkButton = Instance.new("TextButton", LinkFrame)
 			local PremiumTitleLabel = Instance.new("TextLabel", TitleFrame)
 			local DetailsTitleLabel = Instance.new("TextLabel", DetailsContainerFrame)
 			local DetailsLabelOne = Instance.new("TextLabel", DetailsContainerFrame)
@@ -277,6 +278,8 @@ function Library:CreateHub()
 			local DetailsLabelFour = Instance.new("TextLabel", DetailsContainerFrame)
 			local StatusDetailsLabel = Instance.new("TextLabel", StatusFrame)
 			local PremiumStatusLabel = Instance.new("TextLabel", StatusFrame)
+			local PriceLabel = Instance.new("TextLabel", PriceFrame)
+			local LinkButtonLabel = Instance.new("TextLabel", LinkButton)
 
 			PremiumFrame.Size = UDim2.new(1, 0, 1, 0)
 			PremiumFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -472,6 +475,32 @@ function Library:CreateHub()
 			StatusDetailsLabel.ZIndex = 4
 			StatusDetailsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 			StatusDetailsLabel.Name = "Details"
+			
+			LinkButton.Size = UDim2.new(1, 0, 1, 0)
+			LinkButton.BackgroundTransparency = 1
+			LinkButton.ZIndex = 4
+			
+			PriceLabel.Size = UDim2.new(0.855, 0, 1, 0)
+			PriceLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+			PriceLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+			PriceLabel.BackgroundTransparency = 1
+			PriceLabel.Font = Enum.Font.GothamBold
+			PriceLabel.Text = "Price: 5$"
+			PriceLabel.TextSize = 20
+			PriceLabel.ZIndex = 4
+			PriceLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			PriceLabel.Name = "Label"
+			
+			LinkButtonLabel.Size = UDim2.new(0.855, 0, 1, 0)
+			LinkButtonLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+			LinkButtonLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+			LinkButtonLabel.BackgroundTransparency = 1
+			LinkButtonLabel.Font = Enum.Font.GothamBold
+			LinkButtonLabel.Text = "Copy Purchase Link"
+			LinkButtonLabel.TextSize = 20
+			LinkButtonLabel.ZIndex = 4
+			LinkButtonLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			LinkButtonLabel.Name = "Label"
 			
 			BottomFrameList.Padding = UDim.new(0.015, 0)
 			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
