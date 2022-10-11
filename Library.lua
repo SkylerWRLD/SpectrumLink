@@ -453,6 +453,7 @@ function Library:CreateHub()
 			
 			PremiumStatusLabel.Size = UDim2.new(1, 0, 0.25, 0)
 			PremiumStatusLabel.Position = UDim2.new(0, 0, 0.08, 0)
+			PremiumStatusLabel.AnchorPoint = Vector2.new(0, 0)
 			PremiumStatusLabel.BackgroundTransparency = 1
 			PremiumStatusLabel.Font = Enum.Font.GothamBold
 			PremiumStatusLabel.Text = "You Don't Own Premium"
