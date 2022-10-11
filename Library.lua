@@ -32,7 +32,9 @@ end
 --// Main \\--
 
 function CreateHub()
-	if game.Players.LocalPlayer.PlayerGui:FindFirstChild("Spectrum", true) then
+	if game.Players.LocalPlayer.PlayerGui:FindFirstChild("Spectrum", false) then
+		CreateHub()
+	else
 		game.Players.LocalPlayer.PlayerGui.Spectrum:Destroy()
 	end
 	
