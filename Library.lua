@@ -409,6 +409,7 @@ function Library:CreateHub()
 			PremiumList.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			PremiumList.VerticalAlignment = Enum.VerticalAlignment.Center
 			PremiumList.Padding = UDim.new(0.018, 0)
+			PremiumList.SortOrder = Enum.SortOrder.LayoutOrder
 		end
 		
 		function Section:CreateSection(Info)
