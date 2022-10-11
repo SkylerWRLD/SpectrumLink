@@ -9,3 +9,5 @@ PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button"
 	PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button"):WaitForChild("Label").TextSize = 20
 	PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button"):WaitForChild("Label").Text = "Copy Purchase Link"
 end)
+
+--// Testing 2 \\--
