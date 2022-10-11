@@ -125,6 +125,7 @@ function Library:CreateHub()
 	MainStroke.Color = Color3.fromRGB(60, 60, 60)
 	
 	SideBarContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	SideBarContainerList.SortOrder = Enum.SortOrder.Name
 	SideBarContainerPadding.PaddingTop = UDim.new(0, 2)
 	
 	MainCorner.CornerRadius = UDim.new(0, 6)
@@ -196,7 +197,7 @@ function Library:CreateHub()
 		Tab.Size = UDim2.new(0.93, 0, 0, 27)
 		Tab.BackgroundTransparency = 1
 		Tab.ZIndex = 3
-		Tab.LayoutOrder = Info.Order
+		Tab.Name = Info.Name
 		
 		TabFrame.Size = UDim2.new(1, 0, 0, 23)
 		TabFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
