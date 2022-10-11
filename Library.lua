@@ -32,6 +32,10 @@ end
 --// Main \\--
 
 function CreateHub()
+	if game.Players.LocalPlayer.PlayerGui:FindFirstChild("Spectrum", true) then
+		game.Players.LocalPlayer.PlayerGui.Spectrum:Destroy()
+	end
+	
 	local Tab = {}
 	
 	local SpectrumUI = Instance.new("ScreenGui")
