@@ -266,39 +266,56 @@ function Library:CreateHub()
 			local LinkCorner = Instance.new("UICorner", LinkFrame)
 			local PriceCorner = Instance.new("UICorner", PriceFrame)
 			local TitleCorner = Instance.new("UICorner", TitleFrame)
+			local DetailsCorner = Instance.new("UICorner", DetailsFrame)
 			local LinkStroke = Instance.new("UIStroke", LinkFrame)
 			local PriceStroke = Instance.new("UIStroke", PriceFrame)
 			local TitleStroke = Instance.new("UIStroke", TitleFrame)
+			local DetailsStroke = Instance.new("UIStroke", DetailsFrame)
 			local LinkPattern = Instance.new("ImageLabel", LinkFrame)
 			local PricePattern = Instance.new("ImageLabel", PriceFrame)
 			local TitlePattern = Instance.new("ImageLabel", TitleFrame)
+			local DetailsPattern = Instance.new("ImageLabel", DetailsFrame)
 			local LinkPatternCorner = Instance.new("UICorner", LinkPattern)
 			local PricePatternCorner = Instance.new("UICorner", PricePattern)
 			local TitlePatternCorner = Instance.new("UICorner", TitlePattern)
+			local DetailsPatternCorner = Instance.new("UICorner", DetailsPattern)
 			
 			PremiumFrame.Size = UDim2.new(1, 0, 1, 0)
 			PremiumFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 			PremiumFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 			PremiumFrame.BackgroundTransparency = 1
+			PremiumFrame.Name = "PremiumSection"
 			
 			TitleFrame.Size = UDim2.new(0, 400, 0, 35)
 			TitleFrame.AnchorPoint = Vector2.new(0.5, 0)
 			TitleFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			TitleFrame.ZIndex = 3
 			TitleFrame.LayoutOrder = 1
+			TitleFrame.Name = "Title"
+			
+			DetailsFrame.Size = UDim2.new(0, 400, 0, 135)
+			DetailsFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+			DetailsFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+			DetailsFrame.ZIndex = 3
+			DetailsFrame.LayoutOrder = 2
+			DetailsFrame.Name = "Details"
 			
 			BottomFrame.Size = UDim2.new(0, 410, 0, 40)
 			BottomFrame.BackgroundTransparency = 1
+			BottomFrame.Name = "Bottom"
+			BottomFrame.LayoutOrder = 4
 			
 			LinkFrame.Size = UDim2.new(0, 197, 0, 35)
 			LinkFrame.AnchorPoint = Vector2.new(0.5, 1)
 			LinkFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			LinkFrame.ZIndex = 3
+			LinkFrame.Name = "Link"
 			
 			PriceFrame.Size = UDim2.new(0, 197, 0, 35)
 			PriceFrame.AnchorPoint = Vector2.new(0.5, 1)
 			PriceFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			PriceFrame.ZIndex = 3
+			PriceFrame.Name = "Price"
 			
 			LinkPattern.Size = UDim2.new(1, 0, 1, 0)
 			LinkPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -309,6 +326,7 @@ function Library:CreateHub()
 			LinkPattern.ImageTransparency = 0.6
 			LinkPattern.Image = "rbxassetid://2151741365"
 			LinkPattern.ZIndex = 3
+			LinkPattern.Name = "Pattern"
 			
 			PricePattern.Size = UDim2.new(1, 0, 1, 0)
 			PricePattern.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -319,6 +337,7 @@ function Library:CreateHub()
 			PricePattern.ImageTransparency = 0.6
 			PricePattern.Image = "rbxassetid://2151741365"
 			PricePattern.ZIndex = 3
+			PricePattern.Name = "Pattern"
 			
 			TitlePattern.Size = UDim2.new(1, 0, 1, 0)
 			TitlePattern.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -329,24 +348,39 @@ function Library:CreateHub()
 			TitlePattern.ImageTransparency = 0.6
 			TitlePattern.Image = "rbxassetid://2151741365"
 			TitlePattern.ZIndex = 3
+			TitlePattern.Name = "Pattern"
+			
+			DetailsPattern.Size = UDim2.new(1, 0, 1, 0)
+			DetailsPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
+			DetailsPattern.AnchorPoint = Vector2.new(0.5, 0.5)
+			DetailsPattern.BackgroundTransparency = 1
+			DetailsPattern.ScaleType = Enum.ScaleType.Tile
+			DetailsPattern.TileSize = UDim2.new(0, 250, 0, 250)
+			DetailsPattern.ImageTransparency = 0.6
+			DetailsPattern.Image = "rbxassetid://2151741365"
+			DetailsPattern.ZIndex = 3
+			DetailsPattern.Name = "Pattern"
 			
 			BottomFrameList.Padding = UDim.new(0.015, 0)
 			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
 			BottomFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			BottomFrame.LayoutOrder = 4
 			
 			LinkCorner.CornerRadius = UDim.new(0, 3)
 			PriceCorner.CornerRadius = UDim.new(0, 3)
 			TitleCorner.CornerRadius = UDim.new(0, 3)
+			DetailsCorner.CornerRadius = UDim.new(0, 3)
 			LinkPatternCorner.CornerRadius = UDim.new(0, 3)
 			PricePatternCorner.CornerRadius = UDim.new(0, 3)
 			TitlePatternCorner.CornerRadius = UDim.new(0, 3)
+			DetailsPatternCorner.CornerRadius = UDim.new(0, 3)
 			
 			LinkStroke.Color = Color3.fromRGB(60, 60, 60)
 			PriceStroke.Color = Color3.fromRGB(60, 60, 60)
 			TitleStroke.Color = Color3.fromRGB(60, 60, 60)
+			DetailsStroke.Color = Color3.fromRGB(60, 60, 60)
 			
 			PremiumPadding.PaddingTop = UDim.new(0.015, 0)
+			
 			PremiumList.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			PremiumList.VerticalAlignment = Enum.VerticalAlignment.Center
 			PremiumList.Padding = UDim.new(0.018, 0)
