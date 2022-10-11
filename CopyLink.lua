@@ -10,3 +10,5 @@ PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button"
 	PremiumSection.Bottom.Link.Button.Label.TextSize = 20
 	PremiumSection.Bottom.Link.Button.Label.Text = "Copy Purchase Link"
 end)
+
+--// Testing \\--
