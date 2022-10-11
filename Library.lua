@@ -252,7 +252,7 @@ function Library:CreateHub()
 			local LinkStroke = Instance.new("UIStroke", LinkFrame)
 			local PriceStroke = Instance.new("UIStroke", PriceFrame)
 			local LinkPattern = Instance.new("ImageLabel", LinkFrame)
-			local PricePattern = Instance.new("ImageLabel", LinkFrame)
+			local PricePattern = Instance.new("ImageLabel", PriceFrame)
 			local LinkPatternCorner = Instance.new("UICorner", LinkPattern)
 			local PricePatternCorner = Instance.new("UICorner", PricePattern)
 			
