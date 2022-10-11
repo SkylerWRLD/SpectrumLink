@@ -3,12 +3,9 @@ local PremiumSection = SpectrumUI:WaitForChild("Main"):WaitForChild("Sections"):
 
 PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button").MouseButton1Click:Connect(function()
 	setclipboard("https://spectrumhub.site/purchase")
-	PremiumSection.Bottom.Link.Button.Label.TextScaled = true
-	PremiumSection.Bottom.Link.Button.Label.Text = "Copied Purchase Link"
+	PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button"):WaitForChild("Label").TextSize = 15
+	PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button"):WaitForChild("Label").Text = "Copied Purchase Link"
 	wait(2)
-	PremiumSection.Bottom.Link.Button.Label.TextScaled = false
-	PremiumSection.Bottom.Link.Button.Label.TextSize = 20
-	PremiumSection.Bottom.Link.Button.Label.Text = "Copy Purchase Link"
+	PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button"):WaitForChild("Label").TextSize = 20
+	PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button"):WaitForChild("Label").Text = "Copy Purchase Link"
 end)
-
---// Testing \\--
