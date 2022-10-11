@@ -451,17 +451,6 @@ function Library:CreateHub()
 			DetailsLabelFour.TextColor3 = Color3.fromRGB(255, 255, 255)
 			DetailsLabelFour.Name = "LabelFour"
 			
-			StatusDetailsLabel.Size = UDim2.new(1, 0, 0.5, 0)
-			StatusDetailsLabel.Position = UDim2.new(0.5, 0, 0.65, 0)
-			StatusDetailsLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-			StatusDetailsLabel.BackgroundTransparency = 1
-			StatusDetailsLabel.Font = Enum.Font.GothamBold
-			StatusDetailsLabel.Text = "Upgrade From Guest To Premium To Unlock The Premium Benefits!"
-			StatusDetailsLabel.TextScaled = true
-			StatusDetailsLabel.ZIndex = 4
-			StatusDetailsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-			StatusDetailsLabel.Name = "Details"
-			
 			PremiumStatusLabel.Size = UDim2.new(1, 0, 0.25, 0)
 			PremiumStatusLabel.Position = UDim2.new(0.5, 0, 0.08, 0)
 			PremiumStatusLabel.AnchorPoint = Vector2.new(0.5, 0)
@@ -472,6 +461,17 @@ function Library:CreateHub()
 			PremiumStatusLabel.ZIndex = 4
 			PremiumStatusLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
 			PremiumStatusLabel.Name = "PremiumStatus"
+			
+			StatusDetailsLabel.Size = UDim2.new(1, 0, 0.5, 0)
+			StatusDetailsLabel.Position = UDim2.new(0.5, 0, 0.65, 0)
+			StatusDetailsLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+			StatusDetailsLabel.BackgroundTransparency = 1
+			StatusDetailsLabel.Font = Enum.Font.GothamBold
+			StatusDetailsLabel.Text = "Upgrade From Guest To Premium To Unlock The Premium Benefits!"
+			StatusDetailsLabel.TextScaled = true
+			StatusDetailsLabel.ZIndex = 4
+			StatusDetailsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			StatusDetailsLabel.Name = "Details"
 			
 			BottomFrameList.Padding = UDim.new(0.015, 0)
 			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
