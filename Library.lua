@@ -504,10 +504,6 @@ function Library:CreateHub()
 			LinkButtonLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 			LinkButtonLabel.Name = "Label"
 			
-			BottomFrameList.Padding = UDim.new(0.015, 0)
-			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
-			BottomFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			
 			LinkCorner.CornerRadius = UDim.new(0, 3)
 			PriceCorner.CornerRadius = UDim.new(0, 3)
 			TitleCorner.CornerRadius = UDim.new(0, 3)
@@ -532,6 +528,9 @@ function Library:CreateHub()
 			PremiumList.Padding = UDim.new(0.018, 0)
 			PremiumList.SortOrder = Enum.SortOrder.LayoutOrder
 			BottomFrameList.SortOrder = Enum.SortOrder.LayoutOrder
+			BottomFrameList.Padding = UDim.new(0.015, 0)
+			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
+			BottomFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			DetailsContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			DetailsContainerList.VerticalAlignment = Enum.VerticalAlignment.Center
 			DetailsContainerList.Padding = UDim.new(0.1, 0)
