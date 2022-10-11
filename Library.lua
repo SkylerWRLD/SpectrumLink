@@ -496,6 +496,7 @@ function Library:CreateHub()
 			DetailsContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			DetailsContainerList.VerticalAlignment = Enum.VerticalAlignment.Center
 			DetailsContainerList.Padding = UDim.new(0.1, 0)
+			DetailsContainerList.SortOrder = Enum.SortOrder.LayoutOrder
 		end
 		
 		function Section:CreateSection(Info)
