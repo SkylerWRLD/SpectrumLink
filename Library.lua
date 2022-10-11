@@ -300,6 +300,13 @@ function Library:CreateHub()
 			DetailsFrame.LayoutOrder = 2
 			DetailsFrame.Name = "Details"
 			
+			StatusFrame.Size = UDim2.new(0, 400, 0, 88)
+			DetailsFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+			DetailsFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+			DetailsFrame.ZIndex = 3
+			DetailsFrame.LayoutOrder = 3
+			DetailsFrame.Name = "Status"
+			
 			BottomFrame.Size = UDim2.new(0, 410, 0, 40)
 			BottomFrame.BackgroundTransparency = 1
 			BottomFrame.Name = "Bottom"
