@@ -540,6 +540,25 @@ function Library:CreateHub()
 		
 		function Section:CreateSection(Info)
 			local SectionTable = {}
+			
+			local SectionFrame = Instance.new("Frame", SectionsFrame)
+			local SectionContainer = Instance.new("ScrollingFrame", SectionFrame)
+			
+			SectionFrame.Size = UDim2.new(1, 0, 1, 0)
+			SectionFrame.BackgroundTransparency = 1
+			SectionFrame.Name = Info.Name
+			
+			SectionContainer.Size = UDim2.new(1, 0, 1, 0)
+			SectionContainer.Position = UDim2.new(0.5, 0, 0.5, 0)
+			SectionContainer.AnchorPoint = Vector2.new(0.5, 0.5)
+			SectionContainer.BackgroundTransparency = 1
+			SectionContainer.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+			SectionContainer.BottomImage = "rbxassetid://10321579711"
+			SectionContainer.MidImage = "rbxassetid://10321579711"
+			SectionContainer.TopImage = "rbxassetid://10321579711"
+			SectionContainer.ScrollBarImageColor3 = Color3.fromRGB(35, 35, 35)
+			SectionContainer.ScrollBarThickness = 8
+			SectionContainer.ZIndex = 2
 		end
 		
 		return Section
