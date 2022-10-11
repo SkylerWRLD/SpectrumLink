@@ -1,4 +1,4 @@
---local Library = {}
+local Library = {}
 
 --// Services \\--
 
@@ -31,7 +31,7 @@ end
 
 --// Main \\--
 
-function CreateHub()
+function Library:CreateHub()
 	local Tab = {}
 	
 	local SpectrumUI = Instance.new("ScreenGui")
@@ -532,6 +532,6 @@ function CreateHub()
 	return Tab
 end
 
---return Library
-
 RenameUIObjects(game.Players.LocalPlayer.PlayerGui:WaitForChild("Spectrum"))
+
+return Library
