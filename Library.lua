@@ -418,6 +418,8 @@ function Library:CreateHub()
 		return Section
 	end
 	
+	RenameUIObjects(SpectrumUI)
+	
 	return Tab
 end
 
