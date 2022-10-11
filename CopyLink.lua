@@ -4,8 +4,9 @@ local PremiumSection = SpectrumUI:WaitForChild("Main"):WaitForChild("Sections"):
 PremiumSection:WaitForChild("Bottom"):WaitForChild("Link"):WaitForChild("Button").MouseButton1Click:Connect(function()
 	setclipboard("https://spectrumhub.site/purchase")
 	PremiumSection.Bottom.Link.Button.Label.TextScaled = true
-	PremiumSection.Bottom.Link.Button.Label.Text = "Copied The Purchase Link"
+	PremiumSection.Bottom.Link.Button.Label.Text = "Copied Purchase Link"
 	wait(2)
 	PremiumSection.Bottom.Link.Button.Label.TextScaled = false
 	PremiumSection.Bottom.Link.Button.Label.Text = "Copy Purchase Link"
+	LinkButtonLabel.TextSize = 20
 end)
