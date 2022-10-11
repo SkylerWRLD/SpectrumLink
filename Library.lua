@@ -58,21 +58,25 @@ function Library:CreateHub()
 	
 	SpectrumUI.Parent = game.Players.LocalPlayer.PlayerGui
 	SpectrumUI.ZIndexBehavior = Enum.ZIndexBehavior.Global
+	SpectrumUI.Name = "Spectrum"
 	
 	MainFrame.Size = UDim2.new(0, 550, 0, 350)
 	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 	MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 	MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	MainFrame.Name = "Main"
 	
 	TopBarFrame.Size = UDim2.new(1, 0, 0, 30)
 	TopBarFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	TopBarFrame.ZIndex = 2
+	TopBarFrame.Name = "TopBar"
 	
 	SideBarFrame.Size = UDim2.new(0, 140, 0, 319)
 	SideBarFrame.Position = UDim2.new(0, 0, 0.543, 0)
 	SideBarFrame.AnchorPoint = Vector2.new(0, 0.5)
 	SideBarFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	SideBarFrame.ZIndex = 2
+	SideBarFrame.Name = "SideBar"
 	
 	TopBarFillFrame.Size = UDim2.new(1, 0, 0, 11)
 	TopBarFillFrame.Position = UDim2.new(0.5, 0, 1, 0)
