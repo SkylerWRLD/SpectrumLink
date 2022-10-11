@@ -83,6 +83,7 @@ function Library:CreateHub()
 	TopBarFillFrame.AnchorPoint = Vector2.new(0.5, 1)
 	TopBarFillFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	TopBarFillFrame.BorderSizePixel = 0
+	TopBarFillFrame.Name = "Fill"
 	
 	TopBarLineFrame.Size = UDim2.new(1, 0, 0, 1)
 	TopBarLineFrame.Position = UDim2.new(0.5, 0, 1, 0)
@@ -90,17 +91,20 @@ function Library:CreateHub()
 	TopBarLineFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	TopBarLineFrame.BorderSizePixel = 0
 	TopBarLineFrame.ZIndex = 2
+	TopBarLineFrame.Name = "Line"
 	
 	SideBarFixFrameOne.Size = UDim2.new(0, 11, 0, 79)
 	SideBarFixFrameOne.Position = UDim2.new(0, 0, -0.004, 0)
 	SideBarFixFrameOne.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	SideBarFixFrameOne.BorderSizePixel = 0
+	SideBarFixFrameOne.Name = "Fix"
 	
 	SideBarFixFrameTwo.Size = UDim2.new(0, 11, 1, 0)
 	SideBarFixFrameTwo.Position = UDim2.new(1, 0, 0.5, 0)
 	SideBarFixFrameTwo.AnchorPoint = Vector2.new(1, 0.5)
 	SideBarFixFrameTwo.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	SideBarFixFrameTwo.BorderSizePixel = 0
+	SideBarFixFrameTwo.Name = "Fix"
 	
 	SideBarLineFrame.Size = UDim2.new(0, 1, 1, 0)
 	SideBarLineFrame.Position = UDim2.new(1, 0, 0.501, 0)
@@ -108,11 +112,13 @@ function Library:CreateHub()
 	SideBarLineFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	SideBarLineFrame.BorderSizePixel = 0
 	SideBarLineFrame.ZIndex = 2
+	SideBarLineFrame.Name = "Line"
 	
 	SectionsFrame.Size = UDim2.new(0, 410, 0, 320)
 	SectionsFrame.Position = UDim2.new(1, 0, 1, 0)
 	SectionsFrame.AnchorPoint = Vector2.new(1, 1)
 	SectionsFrame.BackgroundTransparency = 1
+	SectionsFrame.Name = "Sections"
 	
 	SectionPattern.Size = UDim2.new(1, 0, 1, 0)
 	SectionPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -122,9 +128,11 @@ function Library:CreateHub()
 	SectionPattern.TileSize = UDim2.new(0, 250, 0, 250)
 	SectionPattern.ImageTransparency = 0.6
 	SectionPattern.Image = "rbxassetid://2151741365"
+	SectionPattern.Name = "Pattern"
 	
 	SideBarContainer.Size = UDim2.new(1, 0, 1, 0)
 	SideBarContainer.BackgroundTransparency = 1
+	SideBarContainer.Name = "Container"
 
 	MainStroke.Color = Color3.fromRGB(60, 60, 60)
 	
@@ -141,12 +149,14 @@ function Library:CreateHub()
 	TopBarCloseButton.ZIndex = 2
 	TopBarCloseButton.Image = "rbxassetid://11230089155"
 	TopBarCloseButton.BackgroundTransparency = 1
+	TopBarCloseButton.Name = "Close"
 	
 	TopBarMinimizeButton.Size = UDim2.new(0, 17, 0, 17)
 	TopBarMinimizeButton.Position = UDim2.new(0.92, 0, 0.194, 0)
 	TopBarMinimizeButton.ZIndex = 2
 	TopBarMinimizeButton.Image = "rbxassetid://10664064072"
 	TopBarMinimizeButton.BackgroundTransparency = 1
+	TopBarMinimizeButton.Name = "Minimize"
 	
 	TopBarTitleLabel.Size = UDim2.new(0, 130, 0, 35)
 	TopBarTitleLabel.Position = UDim2.new(0.015, 0, 0.5, 0)
@@ -158,6 +168,7 @@ function Library:CreateHub()
 	TopBarTitleLabel.TextXAlignment = Enum.TextXAlignment.Left
 	TopBarTitleLabel.ZIndex = 2
 	TopBarTitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TopBarTitleLabel.Name = "Title"
 	
 	local function UpdateInput(Input)
 		local Delta = Input.Position - DragStart
