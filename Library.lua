@@ -272,14 +272,17 @@ function Library:CreateHub()
 			local PriceStroke = Instance.new("UIStroke", PriceFrame)
 			local TitleStroke = Instance.new("UIStroke", TitleFrame)
 			local DetailsStroke = Instance.new("UIStroke", DetailsFrame)
+			local StatusStroke = Instance.new("UIStroke", StatusFrame)
 			local LinkPattern = Instance.new("ImageLabel", LinkFrame)
 			local PricePattern = Instance.new("ImageLabel", PriceFrame)
 			local TitlePattern = Instance.new("ImageLabel", TitleFrame)
 			local DetailsPattern = Instance.new("ImageLabel", DetailsFrame)
+			local StatusPattern = Instance.new("ImageLabel", StatusFrame)
 			local LinkPatternCorner = Instance.new("UICorner", LinkPattern)
 			local PricePatternCorner = Instance.new("UICorner", PricePattern)
 			local TitlePatternCorner = Instance.new("UICorner", TitlePattern)
 			local DetailsPatternCorner = Instance.new("UICorner", DetailsPattern)
+			local StatusPatternCorner = Instance.new("UICorner", StatusPattern)
 			
 			PremiumFrame.Size = UDim2.new(1, 0, 1, 0)
 			PremiumFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -369,6 +372,17 @@ function Library:CreateHub()
 			DetailsPattern.ZIndex = 3
 			DetailsPattern.Name = "Pattern"
 			
+			StatusPattern.Size = UDim2.new(1, 0, 1, 0)
+			StatusPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
+			StatusPattern.AnchorPoint = Vector2.new(0.5, 0.5)
+			StatusPattern.BackgroundTransparency = 1
+			StatusPattern.ScaleType = Enum.ScaleType.Tile
+			StatusPattern.TileSize = UDim2.new(0, 250, 0, 250)
+			StatusPattern.ImageTransparency = 0.6
+			StatusPattern.Image = "rbxassetid://2151741365"
+			StatusPattern.ZIndex = 3
+			StatusPattern.Name = "Pattern"
+			
 			BottomFrameList.Padding = UDim.new(0.015, 0)
 			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
 			BottomFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -382,11 +396,13 @@ function Library:CreateHub()
 			PricePatternCorner.CornerRadius = UDim.new(0, 3)
 			TitlePatternCorner.CornerRadius = UDim.new(0, 3)
 			DetailsPatternCorner.CornerRadius = UDim.new(0, 3)
+			StatusPatternCorner.CornerRadius = UDim.new(0, 3)
 			
 			LinkStroke.Color = Color3.fromRGB(60, 60, 60)
 			PriceStroke.Color = Color3.fromRGB(60, 60, 60)
 			TitleStroke.Color = Color3.fromRGB(60, 60, 60)
 			DetailsStroke.Color = Color3.fromRGB(60, 60, 60)
+			StatusStroke.Color = Color3.fromRGB(60, 60, 60)
 			
 			PremiumPadding.PaddingTop = UDim.new(0.015, 0)
 			
