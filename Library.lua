@@ -317,12 +317,14 @@ function Library:CreateHub()
 			LinkFrame.AnchorPoint = Vector2.new(0.5, 1)
 			LinkFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			LinkFrame.ZIndex = 3
+			LinkFrame.LayoutOrder = 2
 			LinkFrame.Name = "Link"
 			
 			PriceFrame.Size = UDim2.new(0, 197, 0, 35)
 			PriceFrame.AnchorPoint = Vector2.new(0.5, 1)
 			PriceFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			PriceFrame.ZIndex = 3
+			PriceFrame.LayoutOrder = 1
 			PriceFrame.Name = "Price"
 			
 			LinkPattern.Size = UDim2.new(1, 0, 1, 0)
@@ -529,6 +531,7 @@ function Library:CreateHub()
 			PremiumList.VerticalAlignment = Enum.VerticalAlignment.Center
 			PremiumList.Padding = UDim.new(0.018, 0)
 			PremiumList.SortOrder = Enum.SortOrder.LayoutOrder
+			BottomFrameList.SortOrder = Enum.SortOrder.LayoutOrder
 			DetailsContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			DetailsContainerList.VerticalAlignment = Enum.VerticalAlignment.Center
 			DetailsContainerList.Padding = UDim.new(0.1, 0)
