@@ -332,6 +332,9 @@ function Library:CreateHub()
 			TitleStroke.Color = Color3.fromRGB(60, 60, 60)
 			
 			PremiumPadding.PaddingTop = UDim.new(0.015, 0)
+			PremiumList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			PremiumList.VerticalAlignment = Enum.VerticalAlignment.Center
+			PremiumList.Padding = UDim.new(0.018, 0)
 		end
 		
 		function Section:CreateSection(Info)
