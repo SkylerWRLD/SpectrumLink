@@ -494,6 +494,7 @@ function Library:CreateHub()
 			LinkButton.Size = UDim2.new(1, 0, 1, 0)
 			LinkButton.BackgroundTransparency = 1
 			LinkButton.ZIndex = 4
+			LinkButton.Name = "Button"
 			
 			PriceLabel.Size = UDim2.new(0.855, 0, 1, 0)
 			PriceLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -535,13 +536,6 @@ function Library:CreateHub()
 			StatusStroke.Color = Color3.fromRGB(60, 60, 60)
 			
 			PremiumPadding.PaddingTop = UDim.new(0.015, 0)
-			
-			LinkButton.MouseButton1Click:Connect(function()
-				setclipboard("https://spectrumhub.site/purchase")
-				LinkButtonLabel.Text = "Copied The Purchase Link"
-				wait(2)
-				LinkButtonLabel.Text = "Copy Purchase Link"
-			end)
 		end
 		
 		function Section:CreateSection(Info)
