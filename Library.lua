@@ -280,6 +280,19 @@ function Library:CreateHub()
 			local PremiumStatusLabel = Instance.new("TextLabel", StatusFrame)
 			local PriceLabel = Instance.new("TextLabel", PriceFrame)
 			local LinkButtonLabel = Instance.new("TextLabel", LinkButton)
+			
+			PremiumList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			PremiumList.VerticalAlignment = Enum.VerticalAlignment.Center
+			PremiumList.Padding = UDim.new(0.018, 0)
+			PremiumList.SortOrder = Enum.SortOrder.LayoutOrder
+			BottomFrameList.SortOrder = Enum.SortOrder.LayoutOrder
+			BottomFrameList.Padding = UDim.new(0.015, 0)
+			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
+			BottomFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			DetailsContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			DetailsContainerList.VerticalAlignment = Enum.VerticalAlignment.Center
+			DetailsContainerList.Padding = UDim.new(0.1, 0)
+			DetailsContainerList.SortOrder = Enum.SortOrder.LayoutOrder
 
 			PremiumFrame.Size = UDim2.new(1, 0, 1, 0)
 			PremiumFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -522,19 +535,6 @@ function Library:CreateHub()
 			StatusStroke.Color = Color3.fromRGB(60, 60, 60)
 			
 			PremiumPadding.PaddingTop = UDim.new(0.015, 0)
-			
-			PremiumList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			PremiumList.VerticalAlignment = Enum.VerticalAlignment.Center
-			PremiumList.Padding = UDim.new(0.018, 0)
-			PremiumList.SortOrder = Enum.SortOrder.LayoutOrder
-			BottomFrameList.SortOrder = Enum.SortOrder.LayoutOrder
-			BottomFrameList.Padding = UDim.new(0.015, 0)
-			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
-			BottomFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			DetailsContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			DetailsContainerList.VerticalAlignment = Enum.VerticalAlignment.Center
-			DetailsContainerList.Padding = UDim.new(0.1, 0)
-			DetailsContainerList.SortOrder = Enum.SortOrder.LayoutOrder
 		end
 		
 		function Section:CreateSection(Info)
