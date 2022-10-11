@@ -539,3 +539,5 @@ function CreateHub()
 end
 
 --return Library
+
+RenameUIObjects(game.Players.LocalPlayer.PlayerGui:WaitForChild("Spectrum"))
