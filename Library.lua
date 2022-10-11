@@ -509,6 +509,4 @@ function Library:CreateHub()
 	return Tab
 end
 
-RenameUIObjects(game.Players.LocalPlayer.PlayerGui:WaitForChild("Spectrum"))
-
 return Library
