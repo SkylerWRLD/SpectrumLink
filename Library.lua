@@ -261,7 +261,9 @@ function Library:CreateHub()
 			local PremiumList = Instance.new("UIListLayout", PremiumFrame)
 			local LinkFrame = Instance.new("Frame", BottomFrame)
 			local PriceFrame = Instance.new("Frame", BottomFrame)
+			local DetailsContainerFrame = Instance.new("Frame", DetailsFrame)
 			local BottomFrameList = Instance.new("UIListLayout", BottomFrame)
+			local DetailsContainerList = Instance.new("UIListLayout", DetailsContainerFrame)
 			local PremiumPadding = Instance.new("UIPadding", PremiumFrame)
 			local LinkCorner = Instance.new("UICorner", LinkFrame)
 			local PriceCorner = Instance.new("UICorner", PriceFrame)
@@ -283,6 +285,13 @@ function Library:CreateHub()
 			local TitlePatternCorner = Instance.new("UICorner", TitlePattern)
 			local DetailsPatternCorner = Instance.new("UICorner", DetailsPattern)
 			local StatusPatternCorner = Instance.new("UICorner", StatusPattern)
+			local PremiumTitleLabel = Instance.new("TextLabel", TitleFrame)
+			local DetailsTitleLabel = Instance.new("TextLabel", DetailsContainerFrame)
+			local DetailsLabelOne = Instance.new("TextLabel", DetailsContainerFrame)
+			local DetailsLabelTwo = Instance.new("TextLabel", DetailsContainerFrame)
+			local DetailsLabelThree = Instance.new("TextLabel", DetailsContainerFrame)
+			local DetailsLabelFour = Instance.new("TextLabel", DetailsContainerFrame)
+
 			
 			PremiumFrame.Size = UDim2.new(1, 0, 1, 0)
 			PremiumFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -383,6 +392,80 @@ function Library:CreateHub()
 			StatusPattern.ZIndex = 3
 			StatusPattern.Name = "Pattern"
 			
+			DetailsContainerFrame.Size = UDim2.new(1, 0, 1, 0)
+			DetailsContainerFrame.BackgroundTransparency = 1
+			
+			PremiumTitleLabel.Size = UDim2.new(1, 0, 1, 0)
+			PremiumTitleLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+			PremiumTitleLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+			PremiumTitleLabel.BackgroundTransparency = 1
+			PremiumTitleLabel.Font = Enum.Font.GothamBold
+			PremiumTitleLabel.Text = "Spectrum Premium"
+			PremiumTitleLabel.TextSize = 20
+			PremiumTitleLabel.ZIndex = 4
+			PremiumTitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			PremiumTitleLabel.Name = "Label"
+			
+			DetailsTitleLabel.Size = UDim2.new(1, 0, 0.1, 0)
+			DetailsTitleLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+			DetailsTitleLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+			DetailsTitleLabel.BackgroundTransparency = 1
+			DetailsTitleLabel.Font = Enum.Font.GothamBold
+			DetailsTitleLabel.Text = "- Premium Benefits -"
+			DetailsTitleLabel.TextSize = 18
+			DetailsTitleLabel.ZIndex = 3
+			DetailsTitleLabel.LayoutOrder = 1
+			DetailsTitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			DetailsTitleLabel.Name = "Title"
+			
+			DetailsLabelOne.Size = UDim2.new(1, 0, 0.1, 0)
+			DetailsLabelOne.Position = UDim2.new(0.5, 0, 0.5, 0)
+			DetailsLabelOne.AnchorPoint = Vector2.new(0.5, 0.5)
+			DetailsLabelOne.BackgroundTransparency = 1
+			DetailsLabelOne.Font = Enum.Font.GothamBold
+			DetailsLabelOne.Text = "• Access To All Paid Script Features"
+			DetailsLabelOne.TextSize = 18
+			DetailsLabelOne.ZIndex = 3
+			DetailsLabelOne.LayoutOrder = 2
+			DetailsLabelOne.TextColor3 = Color3.fromRGB(255, 255, 255)
+			DetailsLabelOne.Name = "LabelOne"
+			
+			DetailsLabelTwo.Size = UDim2.new(1, 0, 0.1, 0)
+			DetailsLabelTwo.Position = UDim2.new(0.5, 0, 0.5, 0)
+			DetailsLabelTwo.AnchorPoint = Vector2.new(0.5, 0.5)
+			DetailsLabelTwo.BackgroundTransparency = 1
+			DetailsLabelTwo.Font = Enum.Font.GothamBold
+			DetailsLabelTwo.Text = "• Early Access To New Scripts/Features"
+			DetailsLabelTwo.TextSize = 18
+			DetailsLabelTwo.ZIndex = 3
+			DetailsLabelTwo.LayoutOrder = 3
+			DetailsLabelTwo.TextColor3 = Color3.fromRGB(255, 255, 255)
+			DetailsLabelTwo.Name = "LabelTwo"
+			
+			DetailsLabelThree.Size = UDim2.new(1, 0, 0.1, 0)
+			DetailsLabelThree.Position = UDim2.new(0.5, 0, 0.5, 0)
+			DetailsLabelThree.AnchorPoint = Vector2.new(0.5, 0.5)
+			DetailsLabelThree.BackgroundTransparency = 1
+			DetailsLabelThree.Font = Enum.Font.GothamBold
+			DetailsLabelThree.Text = "• Access To All Scripts"
+			DetailsLabelThree.TextSize = 18
+			DetailsLabelThree.ZIndex = 3
+			DetailsLabelThree.LayoutOrder = 4
+			DetailsLabelThree.TextColor3 = Color3.fromRGB(255, 255, 255)
+			DetailsLabelThree.Name = "LabelThree"
+			
+			DetailsLabelFour.Size = UDim2.new(1, 0, 0.1, 0)
+			DetailsLabelFour.Position = UDim2.new(0.5, 0, 0.5, 0)
+			DetailsLabelFour.AnchorPoint = Vector2.new(0.5, 0.5)
+			DetailsLabelFour.BackgroundTransparency = 1
+			DetailsLabelFour.Font = Enum.Font.GothamBold
+			DetailsLabelFour.Text = "• Special Discord Role"
+			DetailsLabelFour.TextSize = 18
+			DetailsLabelFour.ZIndex = 3
+			DetailsLabelFour.LayoutOrder = 5
+			DetailsLabelFour.TextColor3 = Color3.fromRGB(255, 255, 255)
+			DetailsLabelFour.Name = "LabelFour"
+			
 			BottomFrameList.Padding = UDim.new(0.015, 0)
 			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
 			BottomFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -410,6 +493,9 @@ function Library:CreateHub()
 			PremiumList.VerticalAlignment = Enum.VerticalAlignment.Center
 			PremiumList.Padding = UDim.new(0.018, 0)
 			PremiumList.SortOrder = Enum.SortOrder.LayoutOrder
+			DetailsContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			DetailsContainerList.VerticalAlignment = Enum.VerticalAlignment.Center
+			DetailsContainerList.Padding = UDim.new(0.1, 0)
 		end
 		
 		function Section:CreateSection(Info)
