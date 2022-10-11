@@ -535,6 +535,13 @@ function Library:CreateHub()
 			StatusStroke.Color = Color3.fromRGB(60, 60, 60)
 			
 			PremiumPadding.PaddingTop = UDim.new(0.015, 0)
+			
+			LinkButton.MouseButton1Click:Connect(function()
+				setclipboard("https://spectrumhub.site/purchase")
+				LinkButtonLabel.Text = "Copied The Purchase Link"
+				wait(2)
+				LinkButtonLabel.Text = "Copy Purchase Link"
+			end)
 		end
 		
 		function Section:CreateSection(Info)
