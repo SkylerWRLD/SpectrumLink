@@ -567,7 +567,7 @@ function Library:CreateHub()
 		return Section
 	end
 
-	--[[for i, v in pairs(SideBarFrame:GetChildren()) do
+	for i, v in pairs(SideBarFrame:GetChildren()) do
 		if v:IsA("Frame") then
 			v.Frame.TextButton.MouseButton1Click:Connect(function()
 				for x, y in pairs(SectionsFrame:GetChildren()) do
@@ -578,7 +578,7 @@ function Library:CreateHub()
 				end
 			end)
 		end
-	end--]]
+	end
 	
 	return Tab
 end
