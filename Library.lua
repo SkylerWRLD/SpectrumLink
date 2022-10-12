@@ -12,6 +12,7 @@ local DragSpeed = 0.25
 local DragStart = nil
 local StartPosition = nil
 local PlayerMouse = game.Players.LocalPlayer:GetMouse()
+local SpectrumGui
 
 --// Main \\--
 
@@ -562,7 +563,23 @@ function Library:CreateHub()
 		return Section
 	end
 	
+	SpectrumGui = SpectrumUI
+	
 	return Tab
+end
+
+for i, v in pairs(SpectrumGui.SideBar.Container:GetChildren()) do
+	if v:IsA("Frame") then
+		v.Frame.TextButton.MouseButton1Click:Connect(function()
+			for x, y in pairs(SpectrumGui.Sections:GetChildren()) do
+				if y.Name == v.Frame.TextLabel.Text then
+					y.Visible = true
+				else
+					y.Visible = false
+				end
+			end
+		end)
+	end
 end
 
 return Library
