@@ -1,5 +1,3 @@
-local Library = {}
-
 --// Services \\--
 
 local InputService = game:GetService("UserInputService")
@@ -16,7 +14,7 @@ local SpectrumGui
 
 --// Main \\--
 
-function Library:CreateHub()
+function CreateHub()
 	local Tab = {}
 	
 	local SpectrumUI = Instance.new("ScreenGui")
@@ -583,5 +581,3 @@ for i, v in pairs(SpectrumGui.Main.SideBar.Container:GetChildren()) do
 		end)
 	end
 end
-
-return Library
