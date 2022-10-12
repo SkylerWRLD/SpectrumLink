@@ -572,10 +572,12 @@ for i, v in pairs(SpectrumGui.SideBar.Container:GetChildren()) do
 	if v:IsA("Frame") then
 		v.Frame.TextButton.MouseButton1Click:Connect(function()
 			for x, y in pairs(SpectrumGui.Sections:GetChildren()) do
-				if y.Name == v.Frame.TextLabel.Text then
-					y.Visible = true
-				else
-					y.Visible = false
+				if y:IsA("Frame") then
+					if y.Name == v.Frame.TextLabel.Text then
+						y.Visible = true
+					else
+						y.Visible = false
+					end
 				end
 			end
 		end)
