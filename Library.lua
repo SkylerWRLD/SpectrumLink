@@ -568,4 +568,12 @@ function Library:CreateHub()
 	return Tab
 end
 
+--[[local SpectrumUI = game.Players.LocalPlayer.PlayerGui:WaitForChild("Spectrum")
+local SideBarFrame = SpectrumUI:WaitForChild("SideBar")
+local SectionsFrame = SpectrumUI:WaitForChild("Sections")
+
+for i, v in pairs(SideBarFrame:GetChildren()) do
+
+end--]]
+
 return Library
