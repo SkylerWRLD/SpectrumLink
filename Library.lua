@@ -571,7 +571,8 @@ function Library:CreateHub()
 				for x, y in pairs(SectionsFrame:GetChildren()) do
 					if y.Name ~= v.Name then
 						y.Visible = false
-						SectionsFrame:FindFirstChild(v.Frame.TextLabel.Text).Visible = true
+					else
+						y.Visible = true
 					end
 				end
 			end)
