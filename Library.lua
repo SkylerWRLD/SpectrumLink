@@ -1,5 +1,3 @@
---// Test \\--
-
 local Library = {}
 
 --// Services \\--
@@ -576,8 +574,6 @@ function Library:CreateHub()
 		SectionsFrame.Games.Visible = false
 		SectionsFrame.Premium.Visible = true
 	end)
-	
-	--// Test \\-- 
 	
 	return Tab
 end
