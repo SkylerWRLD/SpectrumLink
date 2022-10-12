@@ -574,11 +574,11 @@ local SideBarFrame = SpectrumUI:WaitForChild("SideBar")
 
 for i, v in pairs(SideBarFrame:GetChildren()) do
 	if v:IsA("Frame") then
-		v.TextButton.MouseButton1Click:Connect(function()
+		v.Frame.TextButton.MouseButton1Click:Connect(function()
 			for x, y in pairs(SectionsFrame:GetChildren()) do
 				if y.Name ~= v.TextLabel.Text then
 					y.Visible = false
-					SectionsFrame:FindFirstChild(v.TextLabel.Text).Visible = true
+					SectionsFrame:FindFirstChild(v.Frame.TextLabel.Text).Visible = true
 				end
 			end
 		end)
