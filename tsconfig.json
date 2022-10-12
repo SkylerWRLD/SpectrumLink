@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "types": ["node", "jest"],
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*", "bin/*"]
+    },
+    "plugins": [
+      {
+        "transform": "ts-auto-mock/transformer",
+        "cacheBetweenTests": false
+      },
+    ]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/*.test.ts"]
+}
