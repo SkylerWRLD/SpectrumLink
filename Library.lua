@@ -577,6 +577,8 @@ function Library:CreateHub()
 		SectionsFrame.Premium.Visible = true
 	end)
 	
+	--// Test \\-- 
+	
 	return Tab
 end
 
