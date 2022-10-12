@@ -565,19 +565,6 @@ function Library:CreateHub()
 		return Section
 	end
 	
-	for i, v in pairs(SideBarContainer:GetChildren()) do
-		if v:IsA("Frame") then
-			v.Frame.TextButton.MouseButton1Click:Connect(function()
-				SectionsFrame:FindFirstChild(v.Frame.TextLabel.Text).Visible = true
-				for x, y in pairs(SectionsFrame:GetChildren()) do
-					if y.Name ~= v.Name then
-						y.Visible = false
-					end
-				end
-			end)
-		end
-	end
-	
 	return Tab
 end
 
