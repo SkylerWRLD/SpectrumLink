@@ -39,6 +39,49 @@ function Library:CreateHub()
 	local SideBarContainerList = Instance.new("UIListLayout", SideBarContainer)
 	local SideBarContainerPadding = Instance.new("UIPadding", SideBarContainer)
 	local SectionPattern = Instance.new("ImageLabel", SectionsFrame)
+	local PremiumFrame = Instance.new("Frame", SectionsFrame)
+	local BottomFrame = Instance.new("Frame", PremiumFrame)
+	local DetailsFrame = Instance.new("Frame", PremiumFrame)
+	local StatusFrame = Instance.new("Frame", PremiumFrame)
+	local TitleFrame = Instance.new("Frame", PremiumFrame)
+	local PremiumList = Instance.new("UIListLayout", PremiumFrame)
+	local LinkFrame = Instance.new("Frame", BottomFrame)
+	local PriceFrame = Instance.new("Frame", BottomFrame)
+	local DetailsContainerFrame = Instance.new("Frame", DetailsFrame)
+	local BottomFrameList = Instance.new("UIListLayout", BottomFrame)
+	local DetailsContainerList = Instance.new("UIListLayout", DetailsContainerFrame)
+	local PremiumPadding = Instance.new("UIPadding", PremiumFrame)
+	local LinkCorner = Instance.new("UICorner", LinkFrame)
+	local PriceCorner = Instance.new("UICorner", PriceFrame)
+	local TitleCorner = Instance.new("UICorner", TitleFrame)
+	local DetailsCorner = Instance.new("UICorner", DetailsFrame)
+	local StatusCorner = Instance.new("UICorner", StatusFrame)
+	local LinkStroke = Instance.new("UIStroke", LinkFrame)
+	local PriceStroke = Instance.new("UIStroke", PriceFrame)
+	local TitleStroke = Instance.new("UIStroke", TitleFrame)
+	local DetailsStroke = Instance.new("UIStroke", DetailsFrame)
+	local StatusStroke = Instance.new("UIStroke", StatusFrame)
+	local LinkPattern = Instance.new("ImageLabel", LinkFrame)
+	local PricePattern = Instance.new("ImageLabel", PriceFrame)
+	local TitlePattern = Instance.new("ImageLabel", TitleFrame)
+	local DetailsPattern = Instance.new("ImageLabel", DetailsFrame)
+	local StatusPattern = Instance.new("ImageLabel", StatusFrame)
+	local LinkPatternCorner = Instance.new("UICorner", LinkPattern)
+	local PricePatternCorner = Instance.new("UICorner", PricePattern)
+	local TitlePatternCorner = Instance.new("UICorner", TitlePattern)
+	local DetailsPatternCorner = Instance.new("UICorner", DetailsPattern)
+	local StatusPatternCorner = Instance.new("UICorner", StatusPattern)
+	local LinkButton = Instance.new("TextButton", LinkFrame)
+	local PremiumTitleLabel = Instance.new("TextLabel", TitleFrame)
+	local DetailsTitleLabel = Instance.new("TextLabel", DetailsContainerFrame)
+	local DetailsLabelOne = Instance.new("TextLabel", DetailsContainerFrame)
+	local DetailsLabelTwo = Instance.new("TextLabel", DetailsContainerFrame)
+	local DetailsLabelThree = Instance.new("TextLabel", DetailsContainerFrame)
+	local DetailsLabelFour = Instance.new("TextLabel", DetailsContainerFrame)
+	local StatusDetailsLabel = Instance.new("TextLabel", StatusFrame)
+	local PremiumStatusLabel = Instance.new("TextLabel", StatusFrame)
+	local PriceLabel = Instance.new("TextLabel", PriceFrame)
+	local LinkButtonLabel = Instance.new("TextLabel", LinkButton)
 	
 	SpectrumUI.Parent = game.Players.LocalPlayer.PlayerGui
 	SpectrumUI.ZIndexBehavior = Enum.ZIndexBehavior.Global
@@ -154,6 +197,262 @@ function Library:CreateHub()
 	TopBarTitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TopBarTitleLabel.Name = "Title"
 	
+	PremiumList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	PremiumList.VerticalAlignment = Enum.VerticalAlignment.Center
+	PremiumList.Padding = UDim.new(0.018, 0)
+	PremiumList.SortOrder = Enum.SortOrder.LayoutOrder
+	BottomFrameList.SortOrder = Enum.SortOrder.LayoutOrder
+	BottomFrameList.Padding = UDim.new(0.015, 0)
+	BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
+	BottomFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	DetailsContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	DetailsContainerList.VerticalAlignment = Enum.VerticalAlignment.Center
+	DetailsContainerList.Padding = UDim.new(0.1, 0)
+	DetailsContainerList.SortOrder = Enum.SortOrder.LayoutOrder
+
+	PremiumFrame.Size = UDim2.new(1, 0, 1, 0)
+	PremiumFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+	PremiumFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+	PremiumFrame.BackgroundTransparency = 1
+	PremiumFrame.Name = "Premium"
+
+	TitleFrame.Size = UDim2.new(0, 400, 0, 35)
+	TitleFrame.AnchorPoint = Vector2.new(0.5, 0)
+	TitleFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	TitleFrame.ZIndex = 3
+	TitleFrame.LayoutOrder = 1
+	TitleFrame.Name = "Title"
+
+	DetailsFrame.Size = UDim2.new(0, 400, 0, 135)
+	DetailsFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+	DetailsFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	DetailsFrame.ZIndex = 3
+	DetailsFrame.LayoutOrder = 2
+	DetailsFrame.Name = "Details"
+
+	StatusFrame.Size = UDim2.new(0, 400, 0, 88)
+	StatusFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+	StatusFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	StatusFrame.ZIndex = 3
+	StatusFrame.LayoutOrder = 3
+	StatusFrame.Name = "Status"
+
+	BottomFrame.Size = UDim2.new(0, 410, 0, 40)
+	BottomFrame.BackgroundTransparency = 1
+	BottomFrame.Name = "Bottom"
+	BottomFrame.LayoutOrder = 4
+
+	LinkFrame.Size = UDim2.new(0, 197, 0, 35)
+	LinkFrame.AnchorPoint = Vector2.new(0.5, 1)
+	LinkFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	LinkFrame.ZIndex = 3
+	LinkFrame.LayoutOrder = 2
+	LinkFrame.Name = "Link"
+
+	PriceFrame.Size = UDim2.new(0, 197, 0, 35)
+	PriceFrame.AnchorPoint = Vector2.new(0.5, 1)
+	PriceFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+	PriceFrame.ZIndex = 3
+	PriceFrame.LayoutOrder = 1
+	PriceFrame.Name = "Price"
+
+	LinkPattern.Size = UDim2.new(1, 0, 1, 0)
+	LinkPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
+	LinkPattern.AnchorPoint = Vector2.new(0.5, 0.5)
+	LinkPattern.BackgroundTransparency = 1
+	LinkPattern.ScaleType = Enum.ScaleType.Tile
+	LinkPattern.TileSize = UDim2.new(0, 250, 0, 250)
+	LinkPattern.ImageTransparency = 0.6
+	LinkPattern.Image = "rbxassetid://2151741365"
+	LinkPattern.ZIndex = 3
+	LinkPattern.Name = "Pattern"
+
+	PricePattern.Size = UDim2.new(1, 0, 1, 0)
+	PricePattern.Position = UDim2.new(0.5, 0, 0.5, 0)
+	PricePattern.AnchorPoint = Vector2.new(0.5, 0.5)
+	PricePattern.BackgroundTransparency = 1
+	PricePattern.ScaleType = Enum.ScaleType.Tile
+	PricePattern.TileSize = UDim2.new(0, 250, 0, 250)
+	PricePattern.ImageTransparency = 0.6
+	PricePattern.Image = "rbxassetid://2151741365"
+	PricePattern.ZIndex = 3
+	PricePattern.Name = "Pattern"
+
+	TitlePattern.Size = UDim2.new(1, 0, 1, 0)
+	TitlePattern.Position = UDim2.new(0.5, 0, 0.5, 0)
+	TitlePattern.AnchorPoint = Vector2.new(0.5, 0.5)
+	TitlePattern.BackgroundTransparency = 1
+	TitlePattern.ScaleType = Enum.ScaleType.Tile
+	TitlePattern.TileSize = UDim2.new(0, 250, 0, 250)
+	TitlePattern.ImageTransparency = 0.6
+	TitlePattern.Image = "rbxassetid://2151741365"
+	TitlePattern.ZIndex = 3
+	TitlePattern.Name = "Pattern"
+
+	DetailsPattern.Size = UDim2.new(1, 0, 1, 0)
+	DetailsPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
+	DetailsPattern.AnchorPoint = Vector2.new(0.5, 0.5)
+	DetailsPattern.BackgroundTransparency = 1
+	DetailsPattern.ScaleType = Enum.ScaleType.Tile
+	DetailsPattern.TileSize = UDim2.new(0, 250, 0, 250)
+	DetailsPattern.ImageTransparency = 0.6
+	DetailsPattern.Image = "rbxassetid://2151741365"
+	DetailsPattern.ZIndex = 3
+	DetailsPattern.Name = "Pattern"
+
+	StatusPattern.Size = UDim2.new(1, 0, 1, 0)
+	StatusPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
+	StatusPattern.AnchorPoint = Vector2.new(0.5, 0.5)
+	StatusPattern.BackgroundTransparency = 1
+	StatusPattern.ScaleType = Enum.ScaleType.Tile
+	StatusPattern.TileSize = UDim2.new(0, 250, 0, 250)
+	StatusPattern.ImageTransparency = 0.6
+	StatusPattern.Image = "rbxassetid://2151741365"
+	StatusPattern.ZIndex = 3
+	StatusPattern.Name = "Pattern"
+
+	DetailsContainerFrame.Size = UDim2.new(1, 0, 1, 0)
+	DetailsContainerFrame.BackgroundTransparency = 1
+
+	PremiumTitleLabel.Size = UDim2.new(1, 0, 1, 0)
+	PremiumTitleLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+	PremiumTitleLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+	PremiumTitleLabel.BackgroundTransparency = 1
+	PremiumTitleLabel.Font = Enum.Font.GothamBold
+	PremiumTitleLabel.Text = "Spectrum Premium"
+	PremiumTitleLabel.TextSize = 20
+	PremiumTitleLabel.ZIndex = 4
+	PremiumTitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	PremiumTitleLabel.Name = "Label"
+
+	DetailsTitleLabel.Size = UDim2.new(1, 0, 0.1, 0)
+	DetailsTitleLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+	DetailsTitleLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+	DetailsTitleLabel.BackgroundTransparency = 1
+	DetailsTitleLabel.Font = Enum.Font.GothamBold
+	DetailsTitleLabel.Text = "- Premium Benefits -"
+	DetailsTitleLabel.TextSize = 18
+	DetailsTitleLabel.ZIndex = 4
+	DetailsTitleLabel.LayoutOrder = 1
+	DetailsTitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	DetailsTitleLabel.Name = "Title"
+
+	DetailsLabelOne.Size = UDim2.new(1, 0, 0.1, 0)
+	DetailsLabelOne.Position = UDim2.new(0.5, 0, 0.5, 0)
+	DetailsLabelOne.AnchorPoint = Vector2.new(0.5, 0.5)
+	DetailsLabelOne.BackgroundTransparency = 1
+	DetailsLabelOne.Font = Enum.Font.GothamBold
+	DetailsLabelOne.Text = "• Access To All Paid Script Features"
+	DetailsLabelOne.TextSize = 18
+	DetailsLabelOne.ZIndex = 4
+	DetailsLabelOne.LayoutOrder = 2
+	DetailsLabelOne.TextColor3 = Color3.fromRGB(255, 255, 255)
+	DetailsLabelOne.Name = "LabelOne"
+
+	DetailsLabelTwo.Size = UDim2.new(1, 0, 0.1, 0)
+	DetailsLabelTwo.Position = UDim2.new(0.5, 0, 0.5, 0)
+	DetailsLabelTwo.AnchorPoint = Vector2.new(0.5, 0.5)
+	DetailsLabelTwo.BackgroundTransparency = 1
+	DetailsLabelTwo.Font = Enum.Font.GothamBold
+	DetailsLabelTwo.Text = "• Early Access To New Scripts/Features"
+	DetailsLabelTwo.TextSize = 18
+	DetailsLabelTwo.ZIndex = 4
+	DetailsLabelTwo.LayoutOrder = 3
+	DetailsLabelTwo.TextColor3 = Color3.fromRGB(255, 255, 255)
+	DetailsLabelTwo.Name = "LabelTwo"
+
+	DetailsLabelThree.Size = UDim2.new(1, 0, 0.1, 0)
+	DetailsLabelThree.Position = UDim2.new(0.5, 0, 0.5, 0)
+	DetailsLabelThree.AnchorPoint = Vector2.new(0.5, 0.5)
+	DetailsLabelThree.BackgroundTransparency = 1
+	DetailsLabelThree.Font = Enum.Font.GothamBold
+	DetailsLabelThree.Text = "• Access To All Scripts"
+	DetailsLabelThree.TextSize = 18
+	DetailsLabelThree.ZIndex = 4
+	DetailsLabelThree.LayoutOrder = 4
+	DetailsLabelThree.TextColor3 = Color3.fromRGB(255, 255, 255)
+	DetailsLabelThree.Name = "LabelThree"
+
+	DetailsLabelFour.Size = UDim2.new(1, 0, 0.1, 0)
+	DetailsLabelFour.Position = UDim2.new(0.5, 0, 0.5, 0)
+	DetailsLabelFour.AnchorPoint = Vector2.new(0.5, 0.5)
+	DetailsLabelFour.BackgroundTransparency = 1
+	DetailsLabelFour.Font = Enum.Font.GothamBold
+	DetailsLabelFour.Text = "• Special Discord Role"
+	DetailsLabelFour.TextSize = 18
+	DetailsLabelFour.ZIndex = 4
+	DetailsLabelFour.LayoutOrder = 5
+	DetailsLabelFour.TextColor3 = Color3.fromRGB(255, 255, 255)
+	DetailsLabelFour.Name = "LabelFour"
+
+	PremiumStatusLabel.Size = UDim2.new(1, 0, 0.25, 0)
+	PremiumStatusLabel.Position = UDim2.new(0, 0, 0.08, 0)
+	PremiumStatusLabel.AnchorPoint = Vector2.new(0, 0)
+	PremiumStatusLabel.BackgroundTransparency = 1
+	PremiumStatusLabel.Font = Enum.Font.GothamBold
+	PremiumStatusLabel.Text = "You Don't Own Premium"
+	PremiumStatusLabel.TextSize = 20
+	PremiumStatusLabel.ZIndex = 4
+	PremiumStatusLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+	PremiumStatusLabel.Name = "PremiumStatus"
+
+	StatusDetailsLabel.Size = UDim2.new(1, 0, 0.5, 0)
+	StatusDetailsLabel.Position = UDim2.new(0.5, 0, 0.65, 0)
+	StatusDetailsLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+	StatusDetailsLabel.BackgroundTransparency = 1
+	StatusDetailsLabel.Font = Enum.Font.GothamBold
+	StatusDetailsLabel.Text = "Upgrade From Guest To Premium To Unlock The Premium Benefits!"
+	StatusDetailsLabel.TextScaled = true
+	StatusDetailsLabel.ZIndex = 4
+	StatusDetailsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	StatusDetailsLabel.Name = "Details"
+
+	LinkButton.Size = UDim2.new(1, 0, 1, 0)
+	LinkButton.BackgroundTransparency = 1
+	LinkButton.ZIndex = 4
+	LinkButton.Name = "Button"
+
+	PriceLabel.Size = UDim2.new(0.855, 0, 1, 0)
+	PriceLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+	PriceLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+	PriceLabel.BackgroundTransparency = 1
+	PriceLabel.Font = Enum.Font.GothamBold
+	PriceLabel.Text = "Price: 5$"
+	PriceLabel.TextSize = 20
+	PriceLabel.ZIndex = 4
+	PriceLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	PriceLabel.Name = "Label"
+
+	LinkButtonLabel.Size = UDim2.new(0.855, 0, 1, 0)
+	LinkButtonLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+	LinkButtonLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+	LinkButtonLabel.BackgroundTransparency = 1
+	LinkButtonLabel.Font = Enum.Font.GothamBold
+	LinkButtonLabel.Text = "Copy Purchase Link"
+	LinkButtonLabel.TextSize = 20
+	LinkButtonLabel.ZIndex = 4
+	LinkButtonLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	LinkButtonLabel.Name = "Label"
+
+	LinkCorner.CornerRadius = UDim.new(0, 3)
+	PriceCorner.CornerRadius = UDim.new(0, 3)
+	TitleCorner.CornerRadius = UDim.new(0, 3)
+	DetailsCorner.CornerRadius = UDim.new(0, 3)
+	StatusCorner.CornerRadius = UDim.new(0, 3)
+	LinkPatternCorner.CornerRadius = UDim.new(0, 3)
+	PricePatternCorner.CornerRadius = UDim.new(0, 3)
+	TitlePatternCorner.CornerRadius = UDim.new(0, 3)
+	DetailsPatternCorner.CornerRadius = UDim.new(0, 3)
+	StatusPatternCorner.CornerRadius = UDim.new(0, 3)
+
+	LinkStroke.Color = Color3.fromRGB(60, 60, 60)
+	PriceStroke.Color = Color3.fromRGB(60, 60, 60)
+	TitleStroke.Color = Color3.fromRGB(60, 60, 60)
+	DetailsStroke.Color = Color3.fromRGB(60, 60, 60)
+	StatusStroke.Color = Color3.fromRGB(60, 60, 60)
+
+	PremiumPadding.PaddingTop = UDim.new(0.015, 0)
+	
 	local function UpdateInput(Input)
 		local Delta = Input.Position - DragStart
 		local Position = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y)
@@ -235,308 +534,6 @@ function Library:CreateHub()
 		Corner.CornerRadius = UDim.new(0, 3)
 		PatternCorner.CornerRadius = UDim.new(0, 3)
 		Stroke.Color = Color3.fromRGB(70, 70, 70)
-		
-		function Section:CreatePremium()
-			local PremiumFrame = Instance.new("Frame", SectionsFrame)
-			local BottomFrame = Instance.new("Frame", PremiumFrame)
-			local DetailsFrame = Instance.new("Frame", PremiumFrame)
-			local StatusFrame = Instance.new("Frame", PremiumFrame)
-			local TitleFrame = Instance.new("Frame", PremiumFrame)
-			local PremiumList = Instance.new("UIListLayout", PremiumFrame)
-			local LinkFrame = Instance.new("Frame", BottomFrame)
-			local PriceFrame = Instance.new("Frame", BottomFrame)
-			local DetailsContainerFrame = Instance.new("Frame", DetailsFrame)
-			local BottomFrameList = Instance.new("UIListLayout", BottomFrame)
-			local DetailsContainerList = Instance.new("UIListLayout", DetailsContainerFrame)
-			local PremiumPadding = Instance.new("UIPadding", PremiumFrame)
-			local LinkCorner = Instance.new("UICorner", LinkFrame)
-			local PriceCorner = Instance.new("UICorner", PriceFrame)
-			local TitleCorner = Instance.new("UICorner", TitleFrame)
-			local DetailsCorner = Instance.new("UICorner", DetailsFrame)
-			local StatusCorner = Instance.new("UICorner", StatusFrame)
-			local LinkStroke = Instance.new("UIStroke", LinkFrame)
-			local PriceStroke = Instance.new("UIStroke", PriceFrame)
-			local TitleStroke = Instance.new("UIStroke", TitleFrame)
-			local DetailsStroke = Instance.new("UIStroke", DetailsFrame)
-			local StatusStroke = Instance.new("UIStroke", StatusFrame)
-			local LinkPattern = Instance.new("ImageLabel", LinkFrame)
-			local PricePattern = Instance.new("ImageLabel", PriceFrame)
-			local TitlePattern = Instance.new("ImageLabel", TitleFrame)
-			local DetailsPattern = Instance.new("ImageLabel", DetailsFrame)
-			local StatusPattern = Instance.new("ImageLabel", StatusFrame)
-			local LinkPatternCorner = Instance.new("UICorner", LinkPattern)
-			local PricePatternCorner = Instance.new("UICorner", PricePattern)
-			local TitlePatternCorner = Instance.new("UICorner", TitlePattern)
-			local DetailsPatternCorner = Instance.new("UICorner", DetailsPattern)
-			local StatusPatternCorner = Instance.new("UICorner", StatusPattern)
-			local LinkButton = Instance.new("TextButton", LinkFrame)
-			local PremiumTitleLabel = Instance.new("TextLabel", TitleFrame)
-			local DetailsTitleLabel = Instance.new("TextLabel", DetailsContainerFrame)
-			local DetailsLabelOne = Instance.new("TextLabel", DetailsContainerFrame)
-			local DetailsLabelTwo = Instance.new("TextLabel", DetailsContainerFrame)
-			local DetailsLabelThree = Instance.new("TextLabel", DetailsContainerFrame)
-			local DetailsLabelFour = Instance.new("TextLabel", DetailsContainerFrame)
-			local StatusDetailsLabel = Instance.new("TextLabel", StatusFrame)
-			local PremiumStatusLabel = Instance.new("TextLabel", StatusFrame)
-			local PriceLabel = Instance.new("TextLabel", PriceFrame)
-			local LinkButtonLabel = Instance.new("TextLabel", LinkButton)
-			
-			PremiumList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			PremiumList.VerticalAlignment = Enum.VerticalAlignment.Center
-			PremiumList.Padding = UDim.new(0.018, 0)
-			PremiumList.SortOrder = Enum.SortOrder.LayoutOrder
-			BottomFrameList.SortOrder = Enum.SortOrder.LayoutOrder
-			BottomFrameList.Padding = UDim.new(0.015, 0)
-			BottomFrameList.FillDirection = Enum.FillDirection.Horizontal
-			BottomFrameList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			DetailsContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			DetailsContainerList.VerticalAlignment = Enum.VerticalAlignment.Center
-			DetailsContainerList.Padding = UDim.new(0.1, 0)
-			DetailsContainerList.SortOrder = Enum.SortOrder.LayoutOrder
-
-			PremiumFrame.Size = UDim2.new(1, 0, 1, 0)
-			PremiumFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-			PremiumFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-			PremiumFrame.BackgroundTransparency = 1
-			PremiumFrame.Name = "Premium"
-			
-			TitleFrame.Size = UDim2.new(0, 400, 0, 35)
-			TitleFrame.AnchorPoint = Vector2.new(0.5, 0)
-			TitleFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-			TitleFrame.ZIndex = 3
-			TitleFrame.LayoutOrder = 1
-			TitleFrame.Name = "Title"
-			
-			DetailsFrame.Size = UDim2.new(0, 400, 0, 135)
-			DetailsFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-			DetailsFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-			DetailsFrame.ZIndex = 3
-			DetailsFrame.LayoutOrder = 2
-			DetailsFrame.Name = "Details"
-			
-			StatusFrame.Size = UDim2.new(0, 400, 0, 88)
-			StatusFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-			StatusFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-			StatusFrame.ZIndex = 3
-			StatusFrame.LayoutOrder = 3
-			StatusFrame.Name = "Status"
-			
-			BottomFrame.Size = UDim2.new(0, 410, 0, 40)
-			BottomFrame.BackgroundTransparency = 1
-			BottomFrame.Name = "Bottom"
-			BottomFrame.LayoutOrder = 4
-			
-			LinkFrame.Size = UDim2.new(0, 197, 0, 35)
-			LinkFrame.AnchorPoint = Vector2.new(0.5, 1)
-			LinkFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-			LinkFrame.ZIndex = 3
-			LinkFrame.LayoutOrder = 2
-			LinkFrame.Name = "Link"
-			
-			PriceFrame.Size = UDim2.new(0, 197, 0, 35)
-			PriceFrame.AnchorPoint = Vector2.new(0.5, 1)
-			PriceFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-			PriceFrame.ZIndex = 3
-			PriceFrame.LayoutOrder = 1
-			PriceFrame.Name = "Price"
-			
-			LinkPattern.Size = UDim2.new(1, 0, 1, 0)
-			LinkPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
-			LinkPattern.AnchorPoint = Vector2.new(0.5, 0.5)
-			LinkPattern.BackgroundTransparency = 1
-			LinkPattern.ScaleType = Enum.ScaleType.Tile
-			LinkPattern.TileSize = UDim2.new(0, 250, 0, 250)
-			LinkPattern.ImageTransparency = 0.6
-			LinkPattern.Image = "rbxassetid://2151741365"
-			LinkPattern.ZIndex = 3
-			LinkPattern.Name = "Pattern"
-			
-			PricePattern.Size = UDim2.new(1, 0, 1, 0)
-			PricePattern.Position = UDim2.new(0.5, 0, 0.5, 0)
-			PricePattern.AnchorPoint = Vector2.new(0.5, 0.5)
-			PricePattern.BackgroundTransparency = 1
-			PricePattern.ScaleType = Enum.ScaleType.Tile
-			PricePattern.TileSize = UDim2.new(0, 250, 0, 250)
-			PricePattern.ImageTransparency = 0.6
-			PricePattern.Image = "rbxassetid://2151741365"
-			PricePattern.ZIndex = 3
-			PricePattern.Name = "Pattern"
-			
-			TitlePattern.Size = UDim2.new(1, 0, 1, 0)
-			TitlePattern.Position = UDim2.new(0.5, 0, 0.5, 0)
-			TitlePattern.AnchorPoint = Vector2.new(0.5, 0.5)
-			TitlePattern.BackgroundTransparency = 1
-			TitlePattern.ScaleType = Enum.ScaleType.Tile
-			TitlePattern.TileSize = UDim2.new(0, 250, 0, 250)
-			TitlePattern.ImageTransparency = 0.6
-			TitlePattern.Image = "rbxassetid://2151741365"
-			TitlePattern.ZIndex = 3
-			TitlePattern.Name = "Pattern"
-			
-			DetailsPattern.Size = UDim2.new(1, 0, 1, 0)
-			DetailsPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
-			DetailsPattern.AnchorPoint = Vector2.new(0.5, 0.5)
-			DetailsPattern.BackgroundTransparency = 1
-			DetailsPattern.ScaleType = Enum.ScaleType.Tile
-			DetailsPattern.TileSize = UDim2.new(0, 250, 0, 250)
-			DetailsPattern.ImageTransparency = 0.6
-			DetailsPattern.Image = "rbxassetid://2151741365"
-			DetailsPattern.ZIndex = 3
-			DetailsPattern.Name = "Pattern"
-			
-			StatusPattern.Size = UDim2.new(1, 0, 1, 0)
-			StatusPattern.Position = UDim2.new(0.5, 0, 0.5, 0)
-			StatusPattern.AnchorPoint = Vector2.new(0.5, 0.5)
-			StatusPattern.BackgroundTransparency = 1
-			StatusPattern.ScaleType = Enum.ScaleType.Tile
-			StatusPattern.TileSize = UDim2.new(0, 250, 0, 250)
-			StatusPattern.ImageTransparency = 0.6
-			StatusPattern.Image = "rbxassetid://2151741365"
-			StatusPattern.ZIndex = 3
-			StatusPattern.Name = "Pattern"
-			
-			DetailsContainerFrame.Size = UDim2.new(1, 0, 1, 0)
-			DetailsContainerFrame.BackgroundTransparency = 1
-			
-			PremiumTitleLabel.Size = UDim2.new(1, 0, 1, 0)
-			PremiumTitleLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
-			PremiumTitleLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-			PremiumTitleLabel.BackgroundTransparency = 1
-			PremiumTitleLabel.Font = Enum.Font.GothamBold
-			PremiumTitleLabel.Text = "Spectrum Premium"
-			PremiumTitleLabel.TextSize = 20
-			PremiumTitleLabel.ZIndex = 4
-			PremiumTitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-			PremiumTitleLabel.Name = "Label"
-			
-			DetailsTitleLabel.Size = UDim2.new(1, 0, 0.1, 0)
-			DetailsTitleLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
-			DetailsTitleLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-			DetailsTitleLabel.BackgroundTransparency = 1
-			DetailsTitleLabel.Font = Enum.Font.GothamBold
-			DetailsTitleLabel.Text = "- Premium Benefits -"
-			DetailsTitleLabel.TextSize = 18
-			DetailsTitleLabel.ZIndex = 4
-			DetailsTitleLabel.LayoutOrder = 1
-			DetailsTitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-			DetailsTitleLabel.Name = "Title"
-			
-			DetailsLabelOne.Size = UDim2.new(1, 0, 0.1, 0)
-			DetailsLabelOne.Position = UDim2.new(0.5, 0, 0.5, 0)
-			DetailsLabelOne.AnchorPoint = Vector2.new(0.5, 0.5)
-			DetailsLabelOne.BackgroundTransparency = 1
-			DetailsLabelOne.Font = Enum.Font.GothamBold
-			DetailsLabelOne.Text = "• Access To All Paid Script Features"
-			DetailsLabelOne.TextSize = 18
-			DetailsLabelOne.ZIndex = 4
-			DetailsLabelOne.LayoutOrder = 2
-			DetailsLabelOne.TextColor3 = Color3.fromRGB(255, 255, 255)
-			DetailsLabelOne.Name = "LabelOne"
-			
-			DetailsLabelTwo.Size = UDim2.new(1, 0, 0.1, 0)
-			DetailsLabelTwo.Position = UDim2.new(0.5, 0, 0.5, 0)
-			DetailsLabelTwo.AnchorPoint = Vector2.new(0.5, 0.5)
-			DetailsLabelTwo.BackgroundTransparency = 1
-			DetailsLabelTwo.Font = Enum.Font.GothamBold
-			DetailsLabelTwo.Text = "• Early Access To New Scripts/Features"
-			DetailsLabelTwo.TextSize = 18
-			DetailsLabelTwo.ZIndex = 4
-			DetailsLabelTwo.LayoutOrder = 3
-			DetailsLabelTwo.TextColor3 = Color3.fromRGB(255, 255, 255)
-			DetailsLabelTwo.Name = "LabelTwo"
-			
-			DetailsLabelThree.Size = UDim2.new(1, 0, 0.1, 0)
-			DetailsLabelThree.Position = UDim2.new(0.5, 0, 0.5, 0)
-			DetailsLabelThree.AnchorPoint = Vector2.new(0.5, 0.5)
-			DetailsLabelThree.BackgroundTransparency = 1
-			DetailsLabelThree.Font = Enum.Font.GothamBold
-			DetailsLabelThree.Text = "• Access To All Scripts"
-			DetailsLabelThree.TextSize = 18
-			DetailsLabelThree.ZIndex = 4
-			DetailsLabelThree.LayoutOrder = 4
-			DetailsLabelThree.TextColor3 = Color3.fromRGB(255, 255, 255)
-			DetailsLabelThree.Name = "LabelThree"
-			
-			DetailsLabelFour.Size = UDim2.new(1, 0, 0.1, 0)
-			DetailsLabelFour.Position = UDim2.new(0.5, 0, 0.5, 0)
-			DetailsLabelFour.AnchorPoint = Vector2.new(0.5, 0.5)
-			DetailsLabelFour.BackgroundTransparency = 1
-			DetailsLabelFour.Font = Enum.Font.GothamBold
-			DetailsLabelFour.Text = "• Special Discord Role"
-			DetailsLabelFour.TextSize = 18
-			DetailsLabelFour.ZIndex = 4
-			DetailsLabelFour.LayoutOrder = 5
-			DetailsLabelFour.TextColor3 = Color3.fromRGB(255, 255, 255)
-			DetailsLabelFour.Name = "LabelFour"
-			
-			PremiumStatusLabel.Size = UDim2.new(1, 0, 0.25, 0)
-			PremiumStatusLabel.Position = UDim2.new(0, 0, 0.08, 0)
-			PremiumStatusLabel.AnchorPoint = Vector2.new(0, 0)
-			PremiumStatusLabel.BackgroundTransparency = 1
-			PremiumStatusLabel.Font = Enum.Font.GothamBold
-			PremiumStatusLabel.Text = "You Don't Own Premium"
-			PremiumStatusLabel.TextSize = 20
-			PremiumStatusLabel.ZIndex = 4
-			PremiumStatusLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
-			PremiumStatusLabel.Name = "PremiumStatus"
-			
-			StatusDetailsLabel.Size = UDim2.new(1, 0, 0.5, 0)
-			StatusDetailsLabel.Position = UDim2.new(0.5, 0, 0.65, 0)
-			StatusDetailsLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-			StatusDetailsLabel.BackgroundTransparency = 1
-			StatusDetailsLabel.Font = Enum.Font.GothamBold
-			StatusDetailsLabel.Text = "Upgrade From Guest To Premium To Unlock The Premium Benefits!"
-			StatusDetailsLabel.TextScaled = true
-			StatusDetailsLabel.ZIndex = 4
-			StatusDetailsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-			StatusDetailsLabel.Name = "Details"
-			
-			LinkButton.Size = UDim2.new(1, 0, 1, 0)
-			LinkButton.BackgroundTransparency = 1
-			LinkButton.ZIndex = 4
-			LinkButton.Name = "Button"
-			
-			PriceLabel.Size = UDim2.new(0.855, 0, 1, 0)
-			PriceLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
-			PriceLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-			PriceLabel.BackgroundTransparency = 1
-			PriceLabel.Font = Enum.Font.GothamBold
-			PriceLabel.Text = "Price: 5$"
-			PriceLabel.TextSize = 20
-			PriceLabel.ZIndex = 4
-			PriceLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-			PriceLabel.Name = "Label"
-			
-			LinkButtonLabel.Size = UDim2.new(0.855, 0, 1, 0)
-			LinkButtonLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
-			LinkButtonLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-			LinkButtonLabel.BackgroundTransparency = 1
-			LinkButtonLabel.Font = Enum.Font.GothamBold
-			LinkButtonLabel.Text = "Copy Purchase Link"
-			LinkButtonLabel.TextSize = 20
-			LinkButtonLabel.ZIndex = 4
-			LinkButtonLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-			LinkButtonLabel.Name = "Label"
-			
-			LinkCorner.CornerRadius = UDim.new(0, 3)
-			PriceCorner.CornerRadius = UDim.new(0, 3)
-			TitleCorner.CornerRadius = UDim.new(0, 3)
-			DetailsCorner.CornerRadius = UDim.new(0, 3)
-			StatusCorner.CornerRadius = UDim.new(0, 3)
-			LinkPatternCorner.CornerRadius = UDim.new(0, 3)
-			PricePatternCorner.CornerRadius = UDim.new(0, 3)
-			TitlePatternCorner.CornerRadius = UDim.new(0, 3)
-			DetailsPatternCorner.CornerRadius = UDim.new(0, 3)
-			StatusPatternCorner.CornerRadius = UDim.new(0, 3)
-			
-			LinkStroke.Color = Color3.fromRGB(60, 60, 60)
-			PriceStroke.Color = Color3.fromRGB(60, 60, 60)
-			TitleStroke.Color = Color3.fromRGB(60, 60, 60)
-			DetailsStroke.Color = Color3.fromRGB(60, 60, 60)
-			StatusStroke.Color = Color3.fromRGB(60, 60, 60)
-			
-			PremiumPadding.PaddingTop = UDim.new(0.015, 0)
-		end
 		
 		function Section:CreateSection(Info)
 			local SectionTable = {}
