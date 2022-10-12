@@ -578,8 +578,7 @@ for i, v in pairs(SideBarFrame:GetChildren()) do
 			for x, y in pairs(SectionsFrame:GetChildren()) do
 				if y.Name ~= v.TextLabel.Text then
 					y.Visible = false
-				else
-					y.Visible = true
+					SectionsFrame:FindFirstChild(v.TextLabel.Text).Visible = true
 				end
 			end
 		end)
