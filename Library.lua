@@ -564,16 +564,6 @@ function Library:CreateHub()
 		
 		return Section
 	end
-
-	SideBarContainer["2|Games"].Frame.TextButton.MouseButton1Click:Connect(function()
-		SectionsFrame.Premium.Visible = false
-		SectionsFrame.Games.Visible = true
-	end)
-	
-	SideBarContainer["1|Premium"].Frame.TextButton.MouseButton1Click:Connect(function()
-		SectionsFrame.Games.Visible = false
-		SectionsFrame.Premium.Visible = true
-	end)
 	
 	return Tab
 end
