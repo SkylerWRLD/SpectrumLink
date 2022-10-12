@@ -298,7 +298,7 @@ function Library:CreateHub()
 			PremiumFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 			PremiumFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 			PremiumFrame.BackgroundTransparency = 1
-			PremiumFrame.Name = "PremiumSection"
+			PremiumFrame.Name = "Premium"
 			
 			TitleFrame.Size = UDim2.new(0, 400, 0, 35)
 			TitleFrame.AnchorPoint = Vector2.new(0.5, 0)
@@ -547,6 +547,7 @@ function Library:CreateHub()
 			SectionFrame.Size = UDim2.new(1, 0, 1, 0)
 			SectionFrame.BackgroundTransparency = 1
 			SectionFrame.Name = Info.Name
+			SectionFrame.Visible = false
 			
 			SectionContainer.Size = UDim2.new(1, 0, 1, 0)
 			SectionContainer.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -562,6 +563,19 @@ function Library:CreateHub()
 		end
 		
 		return Section
+	end
+	
+	for i, v in pairs(SideBarContainer:GetChildren()) do
+		if v:IsA("Frame") then
+			v.Frame.TextButton.MouseButton1Click:Connect(function()
+				for x, y in pairs(SectionsFrame:GetChildren()) do
+					if y.Name ~= v.Name then
+						y.Visible = false
+						SectionsFrame:FindFirstChild(v.Frame.TextLabel.Text).Visible = true
+					end
+				end
+			end)
+		end
 	end
 	
 	return Tab
